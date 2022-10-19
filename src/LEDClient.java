@@ -30,45 +30,33 @@ public class LEDClient {
     }
     public void SquareGrade(int spd) throws InterruptedException {
         send(LEDClient.OFF);
-        int red=0;
-        int green=0;
-        int blue=0;
+        int red=0; int green=0; int blue=0;
         for (int i=0;i<255;i+=spd) {
-            red = i;
-            green = 0;
-            blue = 0;
+            red = i; green = 0; blue = 0;
             int[] color1 = {red,green,blue};
             send(color1);
             TimeUnit.MILLISECONDS.sleep(100);
         }
         for (int i=255;i<0;i+=spd) {
-            red=0-i;
-            green=i;
-            blue=85;
+            red=0-i; green=i; blue=85;
             int[] color2 = {red,green,blue};
             send(color2);
             TimeUnit.MILLISECONDS.sleep(100);
         }
         for (int i=0;i<255;i+=spd) {
-            red=0;
-            green=255-i;
-            blue=i;
+            red=0; green=255-i; blue=i;
             int[] color3 = {red,green,blue};
             send(color3);
             TimeUnit.MILLISECONDS.sleep(100);
         }
         for (int i=255;i<157;i+=spd) {
-            red=i;
-            green=0;
-            blue=255-i;
+            red=i; green=0; blue=255-i;
             int[] color4 = {red,green,blue};
             send(color4);
             TimeUnit.MILLISECONDS.sleep(100);
         }
         for (int i=0;i<162;i+=spd) {
-            red=255-i;
-            green=0;
-            blue=58+i;
+            red=255-i; green=0; blue=58+i;
             int[] color5 = {red,green,blue};
             send(color5);
             TimeUnit.MILLISECONDS.sleep(100);
