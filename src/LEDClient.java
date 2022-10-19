@@ -41,7 +41,7 @@ public class LEDClient {
             send(color1);
             TimeUnit.MILLISECONDS.sleep(100);
         }
-        for (int i=255;i>0;i+=spd) {
+        for (int i=255;i<0;i+=spd) {
             red=0-i;
             green=i;
             blue=85;
@@ -68,7 +68,7 @@ public class LEDClient {
         for (int i=0;i<162;i+=spd) {
             red=255-i;
             green=0;
-            blue=58-i;
+            blue=58+i;
             int[] color5 = {red,green,blue};
             send(color5);
             TimeUnit.MILLISECONDS.sleep(100);
