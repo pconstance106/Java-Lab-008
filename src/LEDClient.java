@@ -5,6 +5,12 @@ import org.zeromq.ZMQ;
 import org.zeromq.ZContext;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author Trevor Hartman
+ * @author Paul Constance
+ * @since Version 1.0
+ *
+ */
 public class LEDClient {
     private ZContext zctx;
     private ZMQ.Socket zsocket;
