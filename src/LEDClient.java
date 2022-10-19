@@ -83,7 +83,7 @@ public class LEDClient {
     }
 
     public static void main(String[] args) {
-        LEDClient ledClient = new LEDClient("tcp", "192.168.86.250", 5001);
+        LEDClient ledClient = new LEDClient("tcp", "192.168.1.117", 5001);
         try {
             int[] color = {0, 0, 255};
             ledClient.SquareGrade(10);
